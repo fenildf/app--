@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>饱学席</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+ 
+<body>
+ <!-- 顶部nav -->
+   <nav style="padding:0 0.5rem;">
+   <div class="nav">
+   	<img src="images/shizhong.png">
+    <a href=""><span>继续做题</span></a>
+    <span style="color: #2a9ef4">浙江省会计证考试系统仿真软件</span>
+   </div>
+   </nav>
+<!--轮播图 banner-->
+ <div class="m-slider" id="slider">
+      <div class="ks_dbox ks_ts">
+           <div class="ks_wrap">
+             <img src="images/lunbo.png">
+           </div>
+           <div class="ks_wrap">
+             <img src="images/lunbo1.png">
+           </div>
+           <div class="ks_wrap">
+             <img src="images/lunbo2.png">
+           </div>
+      </div>
+      <div class="ks-circles"><ul class="ks_wt"></ul></div>
+    </div>
+  <!-- 导航 section -->
+    <section style="padding:0 0.5rem;">
+      <div class="community-head">
+        <img src="images/toutiao.png">
+        <span>|</span>
+        <span style="color: #333;text-align:center;display: inline-block;width: 12rem;">热烈庆祝2016年税务技能大赛隆重开幕!</span>
+      </div>
+    </section>
+   <!-- main 菜单 -->
+  <div class="commodity-box">
+   <ul class="commodity">
+    <li>  <article class="confirmOrder">
+    <a href="#" style="display: block;"> <img src="images/1.png">
+      <div class="product-text">
+          <span>会计从业</span>
+          <span class="hue">这里是介绍文字</span>   
+      </div></a>
+     
+    </article></li>
+  
+    <li><article class="confirmOrder">
+    <a href="#" style="display: block;"><img src="images/2.png">
+      <div class="product-text">
+          <span>初级职称</span>
+          <span class="hue">这里是介绍文字</span>   
+      </div></a>
+      
+    </article></li>
+    
+    <li> <article class="confirmOrder">
+    <a href="#" style="display: block;"><img src="images/3.png">
+      <div class="product-text">
+          <span>考吧题库</span>
+          <span class="hue">这里是介绍文字</span>   
+      </div></a>
+      
+    </article></li>
+   
+    <li><article class="confirmOrder">
+    <a href="" style="display: block;"><img src="images/4.png">
+      <div class="product-text">
+          <span>法规库</span>
+          <span class="hue">这里是介绍文字</span>   
+      </div></a>
+      
+    </article></li>
+    
+    </ul> 
+  </div>
+   <!-- bottom 每日一练 -->
+   <article >
+  
+     <div class="text" style="text-align: center;">
+       <span style="font-weight: bold;font-size: 1rem;padding-top: .25rem;display:inline-block;color: #fff;margin-left: 1.3rem;">每日一练 </span>
+      <img src="images/meiriyilian.png">
+       <p style="font-size: .4rem;">登录后练习可获得积分，积分可用来换购商品。</p>
+       <p style="padding-top: .6rem;"><a href="#" style="color: #00aaef;font-weight: bold;">立即练习</a></p>
+     </div>
+   </article>
+
+
+
+   <div class="blank" style="margin-top: 3rem;"></div>
+ <!-- footer 底部菜单 -->
+    <footer>
+    	<a href="#" class="pick">
+    		<i class="icon icon-f1"></i>
+    		首页
+    	</a>
+    	<a href="#">
+    		<i class="icon icon-f2"></i>
+    		题库
+    	</a>
+    	<a href="#">
+    		<i class="icon icon-f3"></i>
+    		我的
+    	</a>
+    </footer>
+    <!-- 引入js资源 -->
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/zepto.kslider.js"></script>
+    <script type="text/javascript">
+      $(function(){
+       //slider
+       $('#slider').slider({
+        className: 'slider_box',
+          tick: 4000 //播放间隔
+      });
+       var imgPieces=$('.m-slider').find('.ks_wrap');
+       for(var i=0;i<imgPieces.length;i++){
+        $('.ks_wt').append('<li></li>');
+        $('.ks_wt').find('li').eq(0).addClass('active');
+       }
+   });
+
+
+</script> 
+</body>
+</html>

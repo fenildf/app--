@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>饱学席登录</title>
+    <link href="css/bass.css" rel="stylesheet"/>
+    <link href="css/select.css" rel="stylesheet" />
+    <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+</head>
+<style type="text/css">
+	body{width:100%;height:100%;margin:0px;padding:0px;background: url(images/dlbj.png)no-repeat;background-size: 100%;}
+	.line1{margin-top: 1rem;}
+	.line1, .line2 { width: 80%;overflow: hidden;border-bottom: 1px solid #686258;margin-left:10%;}
+ /* input{font-weight: bold;}*/
+	.line2{margin-top: 1rem;}
+  .user, .lock { float: left;width: 80%;height: 2rem; border: none;padding-left: 3.5%;line-height: 2rem;font-size: .8rem;outline: none;color: #fff;background: none;}
+  .login{background: url(images/dl.png)no-repeat;background-size: 100%;width: 100%;display: block;text-align: center; border-radius: .5rem;color: #fff;padding: .3rem 0;margin-top: 2.5rem;}
+  .select_content{color: #fff;}
+  .line3{width: 28%;overflow: hidden;border: 1px solid #686258;margin-left:10%;border-radius: .5rem;margin-top: 5rem;padding-left: 1.5%;display:inline-block;}
+  .line4{width: 40%;overflow: hidden;border: 1px solid #686258;margin-left:10%;border-radius: .5rem;margin-top: 1rem;padding-left: 1.5%;display:inline-block;}
+  .tcc{height: 18rem;background:url(images/alert_bg.png)no-repeat; background-size:100%;position: fixed;top: 25%;left: 5%;right: 5%;z-index: 999;display: none;}
+  p{color: #000;text-align: center;margin-top: 7rem; font-weight: bold;}
+  .button {background-color: #0091ef; /* Green */border: none; color: white;padding: .6rem 1.5rem;text-decoration: none;display: block;font-size:.8rem;margin: .2rem .1rem;cursor: pointer;border-radius: .3rem;font-weight: bold;margin:0 auto;margin-top: 1rem;width: 3.5rem;}
+</style>
+<body class="no-js">
+        <script>
+            var el = document.getElementsByTagName("body")[0];''
+            el.className = "";
+        </script>
+    <div style="text-align: center;margin-top: 1.5rem;overflow: hidden; "><img src="images/bxxtitle.png" style="width: 7rem;"></div>
+    <div class="line line1">
+              
+                <input type="text" class="user" value="请输入您的手机号码" onfocus="if(value=='请输入您的手机号码') {value=''}" onblur="if (value=='') {value='请输入您的手机号码'}" data-role="none">
+    </div>
+    <div class="line line2">
+               
+                <input type="text" class="lock" value="请设置密码" onfocus="if(value=='请设置密码') {value=''}" onblur="if (value=='') {value='请设置密码'}" data-role="none">
+    </div>
+     <div class="line line2">
+               
+                <input type="text" class="lock" value="请确认密码" onfocus="if(value=='请确认密码') {value=''}" onblur="if (value=='') {value='请确认密码'}" data-role="none">
+    </div>
+    <div class="vertical">
+        <select id="mySelect">
+          <option value="1" selected="selected">请选择您所在的考试地区</option>
+          <option value="2">嗯嗯嗯</option>
+          <option value="3">嗯嗯嗯</option>
+          <option value="4">嗯嗯嗯</option>
+          <option value="5">嗯嗯嗯</option>
+          <option value="6">嗯嗯嗯</option>
+          <option value="7">嗯嗯嗯</option>
+          <option value="8">嗯嗯嗯</option>
+          <option value="9">嗯嗯嗯</option>
+          <option value="10">嗯嗯嗯</option>
+          <option value="11">嗯嗯嗯</option>
+          <option value="12">嗯嗯嗯</option>
+        </select>
+    </div>
+    <div>
+    <div class="line line3">
+              
+                <input type="text" class="user" value="图形验证码" onfocus="if(value=='图形验证码') {value=''}" onblur="if (value=='') {value='图形验证码'}" data-role="none">
+    </div>
+    
+
+      <input type="text" onclick="" readonly="readonly" id="checkCode" class="unchanged" style="width: 15%;height: 1.5rem;display: inline-block;margin-top: -1.5rem;margin-left: .25rem;"/><br />
+      <a style="font-size: .8rem;display: inline-block;float: right;margin-top: -1.8rem;margin-right: 1.9rem;color:#0091ef; text-decoration:underline;">看不清 换一张</a>
+    <div style="clear:both"></div>
+    </div> 
+    <div><div class="line line4">
+              
+                <input type="text" class="user" value="输入短信验证码" onfocus="if(value=='输入短信验证码') {value=''}" onblur="if (value=='') {value='输入短信验证码'}" data-role="none">
+
+    </div>
+    <a style="font-size: .8rem;color:#fff;display: inline-block;float: right;margin-right: 2.05rem;margin-top: 1.5rem;text-decoration:underline; ">获取短信验证码</a></div>
+    
+    <div style="width: 80%;text-align: center;margin-left:10%;"> 
+                <a class="login" href="#" data-ajax="false" data-role="none" data-transition="slide">立即注册</a>      
+    </div>
+    <div class="tcc">
+    <div class="xx">
+      <img src="images/xx.png" style="width: 1.6rem;float: right;margin-top: .8rem;cursor: pointer;">
+    </div>
+      <p>恭喜您注册成功！马上去登录吧！</p>
+      <a href="微信版登录页.html"><span class="button">立即登录</span></a>
+
+    </div>    
+    
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.select.js"></script>
+<script>
+    $(function () {
+
+       // $("#mySelect").select(); 不传参数可以这样写
+        $("#mySelect").select({
+             themeColor: "#686258",
+             width:"99.7%",
+             fontColor: "#fff"
+        });
+
+    $(".login").click(function(){
+      $(".tcc").show();
+     })
+    $(".xx").click(function(){
+      $(".tcc").hide();
+    })
+
+     })
+</script>
+      
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>关于我们</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+ 
+<body>
+    <!-- 顶部图片 -->
+    <div class="wd_bg">
+       <img src="images/aboutus.png">
+    </div>
+     <div style="height: .8rem;background-color:#eaeaea; "></div>
+    <!-- 菜单项 -->
+   <article class="user-list" style="padding: 0;">
+        <a href="javascript:;" class="select-btn select-btn-t" style="line-height: 3rem;font-size: .8rem;"><img src="images/gsmc.png" style="position: absolute; top: 1rem;">公司名称   <p id="qq">浙江衡信教育科技有限公司</p>   <i class="icon icon-select" style="position: absolute; top: 1.1rem;"></i></a>
+        <a href="javascript:;" class="select-btn select-btn-t" style="line-height: 3rem;font-size: .8rem;" id="phone"><img src="images/lxfs.png" style="position: absolute; top: 1rem;">联系方式 <p id="qq">15757176689</p>  <i class="icon icon-select" style="position: absolute; top: 1.1rem;"></i></a>
+        <a href="javascript:;" class="select-btn select-btn-t" style="line-height: 3rem;font-size: .8rem;"><img src="images/lxr.png" style="position: absolute; top: 1rem;">联系人  <p id="qq">李老师</p> </a>
+        <div style="height: .8rem;background-color:#eaeaea; "></div>
+        <a href="javascript:;" class="select-btn select-btn-t" style="overflow: hidden;line-height: 3rem;font-size: .8rem;"><img src="images/gsdz.png" style="position: absolute; top: 1rem;">公司地址   <p id="qq" style="width: 8rem;padding:0;line-height: 1rem;text-align: center;margin-top: .5rem;">杭州市滨江区南环路3738号税友大厦417室</p>  <i class="icon icon-select" style="position: absolute; top: 1.1rem;"></i></a>
+    </article>
+        <div class="tc_hj">
+            <div style="color: #11aee8;line-height:3rem;text-align: center;border-bottom: 1px solid #e8e8e8;font-weight: bold;font-size: 1rem;">15757176689</div>
+            <div style="text-align: center;line-height: 2.7rem;border-bottom: 1px solid #e8e8e8;font-size: .7rem;font-weight: bold;"><span>工作日：9:00-21:00</span>&nbsp;<span>非工作日：9:00-21:00</span></div>
+            <a href=""><div class="tc_btnl">取消</div></a><a href=""><div class="tc_btnr">呼叫</div></a>
+            <div style="clear: both;"></div>
+        </div>
+  <div class="blank" style="margin-top: 2.7rem;"></div>
+  <!-- footer 底部菜单 -->
+    <footer>
+    	<a href="#" >
+    		<i class="icon icon-f1"></i>
+    		首页
+    	</a>
+    	<a href="#" class="pick">
+    		<i class="icon icon-f2"></i>
+    		题库
+    	</a>
+    	<a href="#">
+    		<i class="icon icon-f3"></i>
+    		我的
+    	</a>
+    </footer>
+    <script src="js/jquery-1.11.1.min.js"></script>
+     <script type="text/javascript">
+
+    $(function () {
+
+
+    $("#phone").click(function(){
+    $(".tc_hj").show();
+     })
+    $(".tc_btnl").click(function(){
+    $(".tc_hj").hide();
+    })
+
+    })
+    </script>
+</body>
+</html>

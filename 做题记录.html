@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>做题记录</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/selectnav.css" rel="stylesheet" />
+    <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" /> 
+</head>
+ 
+<body>
+   <!-- 顶部nav 选择-->
+  <div id="navcontainer1">
+      <div class="vertical">
+        <select id="mySelect">
+          <option value="1" selected="selected">单选题</option>
+          <option value="2">多选题</option>
+          <option value="3">分录题</option>
+          <option value="4">判断题</option>
+          <option value="5">实务题</option>
+          <option value="6">填空题</option>
+        </select>
+      </div>
+      <div class="mingcheng"><span>这里是试卷的名称</span><span>做题的含义</span></div>
+      <div style="clear:both"></div>
+  </div>
+  <!-- 顶部nav 横向滚动-->
+  <div id="navcontainer1" style="background-color: #f2f1f1;clear: both;width: 100%;overflow-x:scroll; white-space:nowrap;">
+  <table >
+    <tr id="shuzi" style="clear: both;white-space:nowrap;">
+      <a href="#" ><td class="now"><span>1</span></td></a>
+      <a href="#" ><td><span>2</span></td></a>
+      <a href="#"><td><span>3</span></td></a>
+      <a href="#"><td><span>4</span></td></a>
+      <a href="#"><td><span>5</span></td></a>
+      <a href="#"><td><span>6</span></td></a>
+      <a href="#"><td><span>7</span></td></a>
+      <a href="#"><td><span>8</span></td></a>
+      <a href="#"><td><span>9</span></td></a>
+      <a href="#"><td><span>10</span></td></a>
+    </tr>
+  </table >
+  </div>
+  <!-- main 题目-->
+  <div class="tab_box">
+  <div class="main main1">
+     <div>
+       <span style="color: #eb6100;">1</span>/<span>10</span>
+       <span style="color: #00b7ee;">(单选题)</span>
+       <span>生产车间管理部门领用的材料费应计入()科目预算。</span>
+     </div>
+     <div class="chose">
+       <input type="radio" id="sccb" checked="checked" name="sport" value="sccb">
+       <label name="sccb"  for="sccb">A、生产成本</label>
+       <input type="radio" id="zufy" name="sport" value="zufy">
+       <label name="zufy" for="zufy">B、制作费用</label>
+       <input type="radio" id="glfy" name="sport" value="glfy">
+       <label name="glfy" for="glfy">C、管理费用</label>
+       <input type="radio" id="yycb" name="sport" value="yycb">
+       <label name="yycb" for="yycb">D、营业成本</label>
+     </div>
+
+       <div class="answer">
+         <span class="wrong">您的答案：C</span><span class="correct">正确答案：A</span>
+       </div>
+
+      <div style="clear:both"></div>
+     </div>
+    </div>
+   <!-- 收藏 -->
+  <div class="collection" id="collection1" style=" margin-left: 40%;">
+    <img src="images/timujiexi.png"><a href=""><span style="color: #eb6100;">题目解析</span></a>
+    <img src="images/fengxiang.png"><a href=""><span>分享</span></a>
+    <img src="images/shoucang.png"><a href=""><span>收藏</span></a>
+  </div>
+
+
+   <div style="background-color: #fff;height: 8.5rem" class="exp">
+     <div class="explain">答案解析：</div>
+     <div class="pp">打我手机的飞洒立刻返回路上风景点四十记得是立法计划大赛挂号费。</div>
+
+   </div>
+   <div class="blank" style="margin-top: 2.7rem;"></div>
+ <!-- footer 底部菜单 -->
+    <footer>
+    	<a href="#" >
+    		<i class="icon icon-f1"></i>
+    		首页
+    	</a>
+    	<a href="#" class="pick">
+    		<i class="icon icon-f2"></i>
+    		题库
+    	</a>
+    	<a href="#">
+    		<i class="icon icon-f3"></i>
+    		我的
+    	</a>
+    </footer>
+   
+
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.select.js"></script>
+<script>
+     $(function () {
+
+       // $("#mySelect").select(); 不传参数可以这样写
+        $("#mySelect").select({
+             themeColor: "#c1c0c0",
+             width:"5.5rem",
+             fontColor: "#000"
+        });
+     })
+
+    $(function() {
+      $('label').click(function(){
+        var radioId = $(this).attr('name');
+        $('label').removeAttr('class') && $(this).attr('class', 'checked');
+        $('input[type="radio"]').removeAttr('checked') && $('#' + radioId).attr('checked', 'checked');
+      });
+    });
+
+    $(function(){
+     $("#navcontainer1 tr td").click(function(){
+     $(this).addClass("now").siblings().removeClass("now"); 
+     var index=$(this).index(); 
+      $(".tab_box >.main").eq(index).show().siblings().hide();
+      });
+    });
+
+   var cur = 0;
+    $(function(){
+     $("#navcontainer1 tr td").click(function(){
+          var _this = $(this);
+          var judge = false;
+          $(".main").eq(cur).find("label").each(function(){
+            if($(this).hasClass("checked")){
+              // alert(1);
+              judge = true;
+            }
+          })
+          if(judge){
+            $("tr td").eq(cur).addClass("before");
+          }
+     $(this).addClass("now").removeClass("before").siblings().removeClass("now"); 
+     var index=$(this).index(); 
+      $(".tab_box >.main").eq(index).show().siblings().hide();
+      cur = $("#navcontainer1 tr td").index(_this);
+      });
+     
+    });
+
+   $(document).ready(function(){ 
+        
+     var n=0;
+     var mar=$(".main").length;
+     $(".btn2").click(function(){
+        var judge = false;
+          var curIndex = $(".btn2").index($(this));
+
+          $(this).parents(".main").find("label").each(function(){
+            if($(this).hasClass("checked")){
+              // alert(1);
+              judge = true;
+            }
+          })
+          if(judge){
+            $("tr td").eq(curIndex).addClass("before");
+          }
+    if(n>=(mar-1)){
+         return false;
+    }
+    n++;
+    cur =n;
+    $(".main").hide().eq(n).show();
+    $("#navcontainer1 tr td").eq(n).addClass("now").removeClass("before").siblings().removeClass("now");
+
+    });
+     $(".btn1").click(function(){
+        var judge = false;
+        
+          var curIndex = $(".btn1").index($(this));
+
+          $(this).parents(".main").find("label").each(function(){
+            if($(this).hasClass("checked")){
+              // alert(1);
+              judge = true;
+            }
+          })
+          if(judge){
+            $("tr td").eq(curIndex).addClass("before");
+          }
+       
+    if(n<=0){
+        return false;
+    }
+    n--;
+    cur =n;
+    $(".main").hide().eq(n).show();
+     $("#navcontainer1 tr td").eq(n).addClass("now").removeClass("before").siblings().removeClass("now");
+});
+})
+
+</script>
+</body>
+</html>
